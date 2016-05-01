@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Class name:
+  = @class_proposal.class_name
+%p
+  %b Description:
+  = @class_proposal.description
+
+= link_to 'Edit', edit_class_proposal_path(@class_proposal)
+\|
+= link_to 'Back', class_proposals_path
