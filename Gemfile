@@ -7,23 +7,19 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-group :development, :test do
-  gem 'byebug'
-end
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
+
 gem 'administrate'
 gem 'administrate-field-image'
 gem 'devise'
 gem 'devise_invitable'
+gem 'foundation-rails', '~>6.2'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'pg'
 gem 'pundit'
 gem 'sendgrid'
 gem 'simple_form'
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -36,9 +32,12 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+  gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'web-console', '~> 2.0'
 end
 group :development, :test do
+  gem 'byebug'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
