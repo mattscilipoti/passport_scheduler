@@ -13,9 +13,7 @@
     = csrf_meta_tags
 
   %body
-    %nav
-      %ul.nav_links
-        =render 'layouts/navigation_links'
-      %ul.nav_links.auth
-        =render 'layouts/nav_links_for_auth'
+    %header
+      = top_bar_component('layouts/nav_links', 'layouts/nav_links_for_auth')
+
     = yield
