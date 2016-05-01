@@ -15,6 +15,7 @@ group :development do
   gem 'spring'
 end
 gem 'administrate'
+gem 'administrate-field-image'
 gem 'devise'
 gem 'devise_invitable'
 gem 'haml-rails'
