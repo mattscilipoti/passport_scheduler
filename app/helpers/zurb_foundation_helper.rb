@@ -1,22 +1,22 @@
 module ZurbFoundationHelper
-  def top_bar_component(left_template_name, right_template_name = nil, title_template_name = nil)
+  def top_bar_component(left_contents, right_contents=nil, title_contents=nil)
     content_tag('div', class: "top-bar") do
 
       left_tag = content_tag('div', class: "top-bar-left") do
-        render left_template_name
+        left_contents
       end
       nav_links = left_tag
 
-      if right_template_name.present?
+      if right_contents.present?
         right_tag = content_tag('div', class: "top-bar-right") do
-          render right_template_name
+          right_contents
         end
         nav_links += right_tag
       end
 
-      if title_template_name.present?
+      if title_contents.present?
         title_tag = content_tag('div', class: "top-bar-title") do
-          render title_template_name
+          title_contents
         end
 
         title_tag + content_tag('div') do
