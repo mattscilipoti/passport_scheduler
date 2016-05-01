@@ -7,4 +7,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    %nav
+      %ul.nav_links
+        =render 'layouts/navigation_links'
+      %ul.nav_links.auth
+        =render 'layouts/nav_links_for_auth'
     = yield
