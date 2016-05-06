@@ -1,4 +1,4 @@
-describe UserPolicy do
+RSpec.describe UserPolicy do
   subject { UserPolicy }
 
   let (:current_user) { FactoryGirl.build_stubbed :user }
