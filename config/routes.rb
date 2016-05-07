@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :users
     root to: "users#index"
   end
-  root to: 'visitors#index'
   devise_for :users
   resources :users
+  # root, see: config/initializers/high_voltage.rb
 end
