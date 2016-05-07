@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :class_proposals
   namespace :admin do
+    resources :class_proposals
     resources :users
     root to: "users#index"
   end
