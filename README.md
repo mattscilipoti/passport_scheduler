@@ -7,6 +7,8 @@ Tool to assist with scheduling classes.
 For Developers
 -----------------
 
+Using Klass (internally) to represent a student's class.
+
 ### Administrate (admin tool)
 
 - To generate for new model.
@@ -18,6 +20,7 @@ For Developers
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ### Rails App Composer
+
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
 provided by the [RailsApps Project](http://railsapps.github.io/).
 

@@ -10,7 +10,7 @@ class KlassDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
-    status: Field::String.with_options(searchable: false),
+    status: Field::EnumField.with_options(searchable: false),
     description: Field::Text,
   }.freeze
 
