@@ -1,8 +1,23 @@
 Passport Scheduler
 ================
 
+Tool to assist with scheduling classes.
+
+
+For Developers
+-----------------
+
+### Administrate (admin tool)
+
+- To generate for new model.
+  1. Add route to 'admin' namespace
+  2. `$ rails generate administrate:install`
+
+### Deployment
+
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+### Rails App Composer
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
 provided by the [RailsApps Project](http://railsapps.github.io/).
 

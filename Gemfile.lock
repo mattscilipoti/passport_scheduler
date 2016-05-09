@@ -54,6 +54,7 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
+    awesome_print (1.6.1)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -203,6 +204,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.3.0)
+      byebug (~> 8.0)
+      pry (~> 0.10)
     puma (3.4.0)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
@@ -334,8 +338,8 @@ PLATFORMS
 DEPENDENCIES
   administrate
   administrate-field-image
+  awesome_print
   better_errors
-  byebug
   capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
@@ -355,6 +359,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   pg
+  pry-byebug
   puma
   pundit
   quiet_assets

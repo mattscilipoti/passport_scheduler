@@ -21,6 +21,7 @@ gem 'sendgrid'
 gem 'simple_form'
 
 group :development do
+  gem 'awesome_print', require: false
   gem 'better_errors'
   gem 'guard-bundler'
   gem 'guard-rails'
@@ -37,7 +38,7 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 group :development, :test do
-  gem 'byebug'
+  gem 'pry-byebug'
   gem 'database_cleaner', require: false
   gem 'factory_girl_rails'
   gem 'faker'

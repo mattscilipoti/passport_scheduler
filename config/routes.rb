@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :class_proposals
     resources :users
+    resources :klasses
     root to: "users#index"
   end
   devise_for :users
