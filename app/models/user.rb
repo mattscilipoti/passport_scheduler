@@ -6,6 +6,11 @@ class User < ActiveRecord::Base
     self.role ||= :user
   end
 
+  # returns the appropriate identifier to help a human identify this user
+  def moniker
+    name || email
+  end
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable, :confirmable,

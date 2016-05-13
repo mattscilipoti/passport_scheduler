@@ -1,4 +1,5 @@
 require 'database_cleaner'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -11,5 +12,22 @@ DatabaseCleaner.clean_with(:truncation)
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
-dada = Klass.create!(name: "Defense Aainst the Dark Arts", description: "A core class and subject.  Students learn how to magically defend themselves against Dark Creatures, the Dark Arts, and other dark charms.")
-astronomy = Klass.create!(name: "Astronomy", description: "A core class and subject.  Astronomy is a branch of magic that studies stars and the movement of planets.")
+# TODO: pull list of teachers and subjects from wikipedia.
+#   maybe https://github.com/molybdenum-99/reality
+snape = FactoryGirl.build(:user, name: 'Severus Snape', email: 'snape@example.com', password: 'potions', password_confirmation: 'potions')
+snape.confirm!
+
+mcgonagall = FactoryGirl.build(:user, name: 'Minerva McGonagal', email: 'mcgonagall@example.com', password: 'potions', password_confirmation: 'potions')
+mcgonagall.confirm!
+
+dada = FactoryGirl.create(:class_proposal,
+name: "Defense Aainst the Dark Arts",
+description: "A core class and subject.  Students learn how to magically defend themselves against Dark Creatures, the Dark Arts, and other dark charms.",
+teacher: snape
+)
+
+astronomy = FactoryGirl.create(:class_proposal,
+name: "Transformation",
+description: "A core class and subject.  It teaches the art of changing the form and appearance of an object.",
+teacher: mcgonagall
+)

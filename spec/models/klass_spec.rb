@@ -16,4 +16,17 @@ RSpec.describe Klass, type: :model do
       end
     end
   end
+
+  describe '#teacher' do
+    let(:snape) { FactoryGirl.create(:user, name: 'Snape') }
+    subject(:klass) { FactoryGirl.create(:klass, name: "DADA", teacher: snape) }
+
+    it "is a User" do
+      expect(klass.teacher).to be_a User
+    end
+
+    it "is the assigned teacher" do
+      expect(klass.teacher).to be snape
+    end
+  end
 end

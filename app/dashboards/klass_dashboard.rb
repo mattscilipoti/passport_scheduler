@@ -9,9 +9,10 @@ class KlassDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    description: Field::Text,
     name: Field::String,
     status: Field::EnumField.with_options(searchable: false),
-    description: Field::Text,
+    teacher: Field::BelongsTo,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,6 +24,7 @@ class KlassDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :status,
+    :teacher,
     # :description,
   ].freeze
 
@@ -32,6 +34,7 @@ class KlassDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :status,
+    :teacher,
     :description,
   ].freeze
 
@@ -41,13 +44,14 @@ class KlassDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :status,
+    :teacher,
     :description,
   ].freeze
 
   # Overwrite this method to customize how klasses are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(klass)
-  #   "Klass ##{klass.id}"
-  # end
+  def display_resource(klass)
+    klass.name
+  end
 end
