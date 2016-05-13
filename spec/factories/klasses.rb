@@ -4,7 +4,7 @@ FactoryGirl.define do
     description "A core class and subject taught at Hogwarts School of Witchcraft and Wizardry. In this class students learn how to magically defend themselves against Dark Creatures, the Dark Arts, and other dark charms. Offensive magic is also taught in this class, such as how to duel, which requires the use of both offensive and defensive magic."
 
     factory :class_proposal do
-      status Klass.statuses[:proposal]
+      status Klass.statuses[:proposed]
     end
   end
 end

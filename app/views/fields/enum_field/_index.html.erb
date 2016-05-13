@@ -1,1 +1,8 @@
-<%= field.to_s %>
+<!-- List all status, indicate current -->
+<% statuses = resource.class.public_send(field.attribute.to_s.pluralize) # method to list enum options %>
+<% statuses.each do |status_key, status_value| %>
+  <% field.enum_iteratee = status_key %>
+  <%= button_to field.caption,
+    admin_klass_path(resource, {klass: {status: status_key.underscore}}),
+    { method: :patch, class: field.css_classes } %>
+<% end %>

@@ -7,13 +7,16 @@ Tool to assist with scheduling classes.
 For Developers
 -----------------
 
-Using Klass (internally) to represent a student's class.
+- Using Klass (internally) to represent a student's class.
+- Recommend you review the [gotchas of Rails enum](https://hackhands.com/ruby-on-enums-queries-and-rails-4-1/)
 
 ### Administrate (admin tool)
 
 - To generate for new model.
   1. Add route to 'admin' namespace
   2. `$ rails generate administrate:install`
+
+- Supports custom EnumField.  Supports assigning AR enums. e.g. Klass.status
 
 ### Deployment
 
