@@ -51,62 +51,68 @@ class UserDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :invited_by,
+    # pull important fields to top
     :id,
-    :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
-    :created_at,
-    :updated_at,
     :name,
+    :email,
+    :role,
+    # sort remaining alphabetically
+    :confirmation_sent_at,
     :confirmation_token,
     :confirmed_at,
-    :confirmation_sent_at,
-    :unconfirmed_email,
-    :role,
+    :created_at,
+    :current_sign_in_at,
+    :current_sign_in_ip,
+    :encrypted_password,
+    :invitation_accepted_at,
+    :invitation_created_at,
+    :invitation_limit,
+    :invitation_sent_at,
     :invitation_token,
+    :invitations_count,
+    :invited_by,
+    :last_sign_in_at,
+    :last_sign_in_ip,
+    :remember_created_at,
+    :reset_password_sent_at,
+    :reset_password_token,
+    :sign_in_count,
+    :unconfirmed_email,
+    :updated_at,
+  ].freeze
+
+  # READ_ONLY ATTRIBUTES
+  read_only_attributes = [
+    :confirmation_sent_at,
+    :confirmation_token,
+    :confirmed_at,
+    :created_at,
+    :current_sign_in_at,
+    :current_sign_in_ip,
+    :encrypted_password,
+    :id,
+    :invitation_accepted_at,
     :invitation_created_at,
     :invitation_sent_at,
-    :invitation_accepted_at,
-    :invitation_limit,
+    :invitation_token,
     :invitations_count,
+    :invited_by,
+    :last_sign_in_at,
+    :last_sign_in_ip,
+    :remember_created_at,
+    :reset_password_sent_at,
+    :reset_password_token,
+    :sign_in_count,
+    :unconfirmed_email,
+    :updated_at,
   ].freeze
+
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = [
-    :invited_by,
-    :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
-    :name,
-    :confirmation_token,
-    :confirmed_at,
-    :confirmation_sent_at,
-    :unconfirmed_email,
-    :role,
-    :invitation_token,
-    :invitation_created_at,
-    :invitation_sent_at,
-    :invitation_accepted_at,
-    :invitation_limit,
-    :invitations_count,
-  ].freeze
+  FORM_ATTRIBUTES = (SHOW_PAGE_ATTRIBUTES - read_only_attributes).freeze
+
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
