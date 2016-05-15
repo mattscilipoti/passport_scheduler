@@ -17,6 +17,28 @@ RSpec.describe Klass, type: :model do
     end
   end
 
+  describe '#student_age_minimum' do
+    subject(:klass) { FactoryGirl.create(:klass, name: "TEST AGE RANGE") }
+    [0, -1, -10].each do |age_threshold|
+      it "must be positive (checking #{age_threshold})" do
+        klass.student_age_minimum = 0
+        klass.valid?
+        expect(klass.errors.full_messages_for(:student_age_minimum)).to_not be_empty
+      end
+    end
+  end
+
+  describe '#student_age_maximum' do
+    subject(:klass) { FactoryGirl.create(:klass, name: "TEST AGE RANGE") }
+    [0, 1, -10].each do |age_threshold|
+      it "must be > 1 (checking #{age_threshold})" do
+        klass.student_age_maximum = age_threshold
+        klass.valid?
+        expect(klass.errors.full_messages_for(:student_age_maximum)).to_not be_empty
+      end
+    end
+  end
+
   describe '#teacher' do
     let(:snape) { FactoryGirl.create(:user, name: 'Snape') }
     subject(:klass) { FactoryGirl.create(:klass, name: "DADA", teacher: snape) }

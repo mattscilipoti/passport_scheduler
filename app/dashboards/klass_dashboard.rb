@@ -13,6 +13,8 @@ class KlassDashboard < Administrate::BaseDashboard
     name: Field::String,
     status: Field::EnumField.with_options(searchable: false),
     teacher: Field::BelongsTo,
+    student_age_minimum: Field::Number,
+    student_age_maximum: Field::Number,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -25,7 +27,8 @@ class KlassDashboard < Administrate::BaseDashboard
     :name,
     :status,
     :teacher,
-    # :description,
+    :student_age_minimum,
+    :student_age_maximum,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -36,6 +39,8 @@ class KlassDashboard < Administrate::BaseDashboard
     :status,
     :teacher,
     :description,
+    :student_age_minimum,
+    :student_age_maximum,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -46,6 +51,8 @@ class KlassDashboard < Administrate::BaseDashboard
     :status,
     :teacher,
     :description,
+    :student_age_minimum,
+    :student_age_maximum,
   ].freeze
 
   # Overwrite this method to customize how klasses are displayed

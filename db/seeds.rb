@@ -23,11 +23,15 @@ mcgonagall.confirm!
 dada = FactoryGirl.create(:class_proposal,
 name: "Defense Aainst the Dark Arts",
 description: "A core class and subject.  Students learn how to magically defend themselves against Dark Creatures, the Dark Arts, and other dark charms.",
-teacher: snape
+teacher: snape,
+student_age_minimum: 14,
+student_age_maximum: 18,
 )
 
-astronomy = FactoryGirl.create(:class_proposal,
+transformation = FactoryGirl.create(:class_proposal,
 name: "Transformation",
 description: "A core class and subject.  It teaches the art of changing the form and appearance of an object.",
-teacher: mcgonagall
+teacher: mcgonagall,
+student_age_minimum: 13,
+student_age_maximum: 18,
 )
