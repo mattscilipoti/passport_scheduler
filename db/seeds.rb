@@ -26,12 +26,14 @@ description: "A core class and subject.  Students learn how to magically defend 
 teacher: snape,
 student_age_minimum: 14,
 student_age_maximum: 18,
+student_count_minimum: 4,
+student_count_maximum: 12,
 )
 
 transformation = FactoryGirl.create(:class_proposal,
 name: "Transformation",
 description: "A core class and subject.  It teaches the art of changing the form and appearance of an object.",
 teacher: mcgonagall,
-student_age_minimum: 13,
-student_age_maximum: 18,
+student_age_minimum: 4,
+student_age_maximum: 15,
 )

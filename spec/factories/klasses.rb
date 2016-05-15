@@ -5,6 +5,8 @@ FactoryGirl.define do
     name "Defense Against the Dark Arts"
     student_age_minimum 1
     student_age_maximum 99
+    student_count_minimum 4
+    student_count_maximum 15
 
     factory :class_proposal do
       status Klass.statuses[:proposed]

@@ -15,6 +15,8 @@ class KlassDashboard < Administrate::BaseDashboard
     teacher: Field::BelongsTo,
     student_age_minimum: Field::Number,
     student_age_maximum: Field::Number,
+    student_count_minimum: Field::Number,
+    student_count_maximum: Field::Number,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -41,7 +43,10 @@ class KlassDashboard < Administrate::BaseDashboard
     :description,
     :student_age_minimum,
     :student_age_maximum,
+    :student_count_minimum,
+    :student_count_maximum,
   ].freeze
+
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
@@ -53,6 +58,8 @@ class KlassDashboard < Administrate::BaseDashboard
     :description,
     :student_age_minimum,
     :student_age_maximum,
+    :student_count_minimum,
+    :student_count_maximum,
   ].freeze
 
   # Overwrite this method to customize how klasses are displayed
