@@ -19,7 +19,6 @@ class KlassDashboard < Administrate::BaseDashboard
     student_count_maximum: Field::Number,
     materials_fee: Field::Number.with_options(
       prefix: "$",
-      multiplier: 0.01,
       decimals: 2,
     ),
   }.freeze
