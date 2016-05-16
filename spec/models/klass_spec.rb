@@ -17,6 +17,22 @@ RSpec.describe Klass, type: :model do
     end
   end
 
+  describe '#materials_fee' do
+    subject(:klass) { FactoryGirl.create(:klass, name: 'TEST FEE')}
+
+    it "matches :materials_fee without a '_cents' suffix by default" do
+      is_expected.to monetize(:materials_fee)
+    end
+
+    [-1, -10].each do |fee|
+      it "must be positive (checking #{fee})" do
+        klass.materials_fee = fee
+        klass.valid?
+        expect(klass.errors.full_messages_for(:materials_fee)).to_not be_empty
+      end
+    end
+  end
+
   describe '#student_age_minimum' do
     subject(:klass) { FactoryGirl.create(:klass, name: "TEST AGE RANGE") }
     [0, -1, -10].each do |age_threshold|

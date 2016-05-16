@@ -17,6 +17,11 @@ class KlassDashboard < Administrate::BaseDashboard
     student_age_maximum: Field::Number,
     student_count_minimum: Field::Number,
     student_count_maximum: Field::Number,
+    materials_fee: Field::Number.with_options(
+      prefix: "$",
+      multiplier: 0.01,
+      decimals: 2,
+    ),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -31,6 +36,7 @@ class KlassDashboard < Administrate::BaseDashboard
     :teacher,
     :student_age_minimum,
     :student_age_maximum,
+    :materials_fee,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -45,6 +51,7 @@ class KlassDashboard < Administrate::BaseDashboard
     :student_age_maximum,
     :student_count_minimum,
     :student_count_maximum,
+    :materials_fee,
   ].freeze
 
 
@@ -60,6 +67,7 @@ class KlassDashboard < Administrate::BaseDashboard
     :student_age_maximum,
     :student_count_minimum,
     :student_count_maximum,
+    :materials_fee,
   ].freeze
 
   # Overwrite this method to customize how klasses are displayed

@@ -28,6 +28,8 @@ student_age_minimum: 14,
 student_age_maximum: 18,
 student_count_minimum: 4,
 student_count_maximum: 12,
+materials_fee_cents: 7512,
+materials_fee_currency: 'EUR',
 )
 
 transformation = FactoryGirl.create(:class_proposal,
@@ -36,4 +38,5 @@ description: "A core class and subject.  It teaches the art of changing the form
 teacher: mcgonagall,
 student_age_minimum: 4,
 student_age_maximum: 15,
+materials_fee: 0,
 )
