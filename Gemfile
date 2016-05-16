@@ -50,6 +50,7 @@ group :production do
   gem 'rails_12factor'
 end
 group :test do
+  gem 'accept_values_for'
   gem 'capybara'
   gem 'launchy'
   gem 'selenium-webdriver'

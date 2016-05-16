@@ -24,57 +24,34 @@ RSpec.describe Klass, type: :model do
       is_expected.to monetize(:materials_fee)
     end
 
-    [-1, -10].each do |fee|
-      it "must be positive (checking #{fee})" do
-        klass.materials_fee = fee
-        klass.valid?
-        expect(klass.errors.full_messages_for(:materials_fee)).to_not be_empty
-      end
-    end
+    it { should accept_values_for(:materials_fee, 0, 1, 3, 10, 1000) }
+    it { should_not accept_values_for(:materials_fee, 1001, -1, -3, -1001) }
+
   end
 
   describe '#student_age_minimum' do
     subject(:klass) { FactoryGirl.create(:klass, name: "TEST AGE RANGE") }
-    [0, -1, -10].each do |age_threshold|
-      it "must be positive (checking #{age_threshold})" do
-        klass.student_age_minimum = age_threshold
-        klass.valid?
-        expect(klass.errors.full_messages_for(:student_age_minimum)).to_not be_empty
-      end
-    end
+
+    it { should accept_values_for(:student_age_minimum, 1, 3, 10, 148) }
+    it { should_not accept_values_for(:student_age_minimum, 149, 0, -1, -3, -1001) }
   end
 
   describe '#student_age_maximum' do
     subject(:klass) { FactoryGirl.create(:klass, name: "TEST AGE RANGE") }
-    [0, 1, -10].each do |age_threshold|
-      it "must be > 1 (checking #{age_threshold})" do
-        klass.student_age_maximum = age_threshold
-        klass.valid?
-        expect(klass.errors.full_messages_for(:student_age_maximum)).to_not be_empty
-      end
-    end
+    it { should accept_values_for(:student_age_maximum, 2, 3, 10, 149) }
+    it { should_not accept_values_for(:student_age_maximum, 150, 0, 1, -1, -3, -1001) }
   end
 
   describe '#student_count_minimum' do
     subject(:klass) { FactoryGirl.create(:klass, name: "TEST AGE RANGE") }
-    [0, -1, -10].each do |count_threshold|
-      it "must be positive (checking #{count_threshold})" do
-        klass.student_count_minimum = count_threshold
-        klass.valid?
-        expect(klass.errors.full_messages_for(:student_count_minimum)).to_not be_empty
-      end
-    end
+    it { should accept_values_for(:student_count_minimum, 1, 3, 10, 1000) }
+    it { should_not accept_values_for(:student_count_minimum, 0, -1, -3, -1000) }
   end
 
   describe '#student_count_maximum' do
     subject(:klass) { FactoryGirl.create(:klass, name: "TEST AGE RANGE") }
-    [0, 1, -10].each do |count_threshold|
-      it "must be > 1 (checking #{count_threshold})" do
-        klass.student_count_maximum = count_threshold
-        klass.valid?
-        expect(klass.errors.full_messages_for(:student_count_maximum)).to_not be_empty
-      end
-    end
+    it { should accept_values_for(:student_count_maximum, 2, 3, 10, 1000) }
+    it { should_not accept_values_for(:student_count_maximum, 0, 1, -1, -3, -1000) }
   end
 
   describe '#teacher' do

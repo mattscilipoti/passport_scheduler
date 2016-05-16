@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    accept_values_for (0.7.2)
+      activemodel (>= 3, < 5)
+      rspec (>= 2.0, < 4.0)
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
       actionview (= 4.2.6)
@@ -347,6 +350,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  accept_values_for
   administrate
   administrate-field-image
   awesome_print
