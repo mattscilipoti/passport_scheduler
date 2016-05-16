@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160515144425) do
     t.string  "name"
     t.text    "description"
     t.integer "status",                 default: 0,     null: false
-    t.integer "teacher_id",                             null: false
+    t.integer "teacher_id"
     t.integer "student_age_minimum"
     t.integer "student_age_maximum"
     t.integer "student_count_minimum"
