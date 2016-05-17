@@ -14,10 +14,10 @@ puts 'CREATED ADMIN USER: ' << user.email
 
 # TODO: pull list of teachers and subjects from wikipedia.
 #   maybe https://github.com/molybdenum-99/reality
-snape = FactoryGirl.build(:user, name: 'Severus Snape', email: 'snape@example.com', password: 'potions', password_confirmation: 'potions')
+snape = FactoryGirl.build(:teacher, name: 'Severus Snape', email: 'snape@example.com', password: 'potions', password_confirmation: 'potions')
 snape.confirm!
 
-mcgonagall = FactoryGirl.build(:user, name: 'Minerva McGonagal', email: 'mcgonagall@example.com', password: 'potions', password_confirmation: 'potions')
+mcgonagall = FactoryGirl.build(:teacher, name: 'Minerva McGonagal', email: 'mcgonagall@example.com', password: 'potions', password_confirmation: 'potions')
 mcgonagall.confirm!
 
 dada = FactoryGirl.create(:class_proposal,
@@ -29,7 +29,7 @@ student_age_maximum: 18,
 student_count_minimum: 4,
 student_count_maximum: 12,
 materials_fee_cents: 7512,
-materials_fee_currency: 'EUR',
+materials_fee_currency: 'USD',
 )
 
 transformation = FactoryGirl.create(:class_proposal,
