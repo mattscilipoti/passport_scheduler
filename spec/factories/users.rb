@@ -5,7 +5,7 @@ FactoryGirl.define do
 
   factory :user do
     confirmed_at Time.now
-    sequence(:name) { |n| "Test User#{n}" }
+    sequence(:name) { |n| "TEST User#{n}" }
     email
     password "please123"
 
@@ -14,7 +14,7 @@ FactoryGirl.define do
     end
 
     factory :teacher do
-      sequence(:name) { |n| "Test Teacher#{n}" }
+      sequence(:name) { |n| "TEST Teacher#{n}" }
     end
   end
 end
