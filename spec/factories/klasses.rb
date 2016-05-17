@@ -7,6 +7,7 @@ FactoryGirl.define do
     student_age_maximum 99
     student_count_minimum 4
     student_count_maximum 15
+    year Date.today.year
 
     factory :class_proposal do
       status Klass.statuses[:proposed]
