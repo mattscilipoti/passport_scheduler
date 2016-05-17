@@ -39,10 +39,11 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 group :development, :test do
-  gem 'pry-byebug'
   gem 'database_cleaner', require: false
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'pry-byebug'
+  gem 'pry-rails' # supports reload! and others: https://github.com/rweng/pry-rails
   gem 'rspec-rails'
 end
 group :production do
