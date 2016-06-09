@@ -14,6 +14,10 @@ RSpec.describe Teacher, type: :model do
     expect(User.count).to eql(3)
   end
 
+  after :all do
+    DatabaseCleaner.clean_with :truncation
+  end
+
   describe '.all' do
     it "returns the subset of Users that are Teachers" do
       expect(Teacher.all).to match_array(@teachers)
