@@ -3,7 +3,7 @@ Passport Scheduler
 
 Tool to assist with scheduling classes.
 
-[ ![Codeship Status for mattscilipoti/passport_scheduler](https://codeship.com/projects/089a0130-1083-0134-9c2b-728415b5360a/status?branch=master)](https://codeship.com/projects/157008)
+[![Planning](https://badge.waffle.io/mattscilipoti/passport_scheduler.svg?label=ready&title=Planning-On Deck)](http://waffle.io/mattscilipoti/passport_scheduler) [ ![Codeship Status for mattscilipoti/passport_scheduler](https://codeship.com/projects/089a0130-1083-0134-9c2b-728415b5360a/status?branch=master)](https://codeship.com/projects/157008)
 
 For Developers
 -----------------
