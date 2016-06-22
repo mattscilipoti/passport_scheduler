@@ -5,6 +5,7 @@ Tool to assist with scheduling classes.
 
 [![Planning](https://badge.waffle.io/mattscilipoti/passport_scheduler.svg?label=ready&title=Planning-On Deck)](http://waffle.io/mattscilipoti/passport_scheduler)
 [![Code Climate](https://codeclimate.com/github/mattscilipoti/passport_scheduler/badges/gpa.svg)](https://codeclimate.com/github/mattscilipoti/passport_scheduler)
+[![Test Coverage](https://codeclimate.com/github/mattscilipoti/passport_scheduler/badges/coverage.svg)](https://codeclimate.com/github/mattscilipoti/passport_scheduler/coverage)
 [ ![Codeship Status for mattscilipoti/passport_scheduler](https://codeship.com/projects/089a0130-1083-0134-9c2b-728415b5360a/status?branch=master)](https://codeship.com/projects/157008)
 
 For Developers

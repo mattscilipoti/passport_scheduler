@@ -53,6 +53,7 @@ end
 group :test do
   gem 'accept_values_for'
   gem 'capybara'
+  gem "codeclimate-test-reporter", require: nil
   gem 'launchy'
   gem 'selenium-webdriver'
 end
