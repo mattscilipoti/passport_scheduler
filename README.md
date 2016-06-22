@@ -3,13 +3,22 @@ Passport Scheduler
 
 Tool to assist with scheduling classes.
 
-[![Planning](https://badge.waffle.io/mattscilipoti/passport_scheduler.svg?label=ready&title=Planning-On Deck)](http://waffle.io/mattscilipoti/passport_scheduler) [ ![Codeship Status for mattscilipoti/passport_scheduler](https://codeship.com/projects/089a0130-1083-0134-9c2b-728415b5360a/status?branch=master)](https://codeship.com/projects/157008)
+[![Planning](https://badge.waffle.io/mattscilipoti/passport_scheduler.svg?label=ready&title=Planning-On Deck)](http://waffle.io/mattscilipoti/passport_scheduler)
+[![Code Climate](https://codeclimate.com/github/mattscilipoti/passport_scheduler/badges/gpa.svg)](https://codeclimate.com/github/mattscilipoti/passport_scheduler)
+[ ![Codeship Status for mattscilipoti/passport_scheduler](https://codeship.com/projects/089a0130-1083-0134-9c2b-728415b5360a/status?branch=master)](https://codeship.com/projects/157008)
 
 For Developers
 -----------------
 
 - Using Klass (internally) to represent a student's class.
 - Recommend you review the [gotchas of Rails enum](https://hackhands.com/ruby-on-enums-queries-and-rails-4-1/)
+
+### Metrics
+
+- CodeClimate: uses Docker to run many Metrics,
+   ```
+   $ codeclimate analyze
+  ```
 
 ### Administrate (admin tool)
 
