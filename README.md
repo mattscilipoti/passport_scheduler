@@ -16,8 +16,8 @@ All dependencies for this project are provided in (and isolated within) docker c
 
 1. build and run the container
   ```
-  $ docker build -t greatenough/passport_scheduler_rails .
-  $ docker run -itP -p 80:3000  greatenough/passport_scheduler_rails
+  $ docker-compose build
+  $ docker-compose up
   ```
 
 2. Browse to http://localhost.
