@@ -8,6 +8,33 @@ Tool to assist with scheduling classes.
 [![Test Coverage](https://codeclimate.com/github/mattscilipoti/passport_scheduler/badges/coverage.svg)](https://codeclimate.com/github/mattscilipoti/passport_scheduler/coverage)
 [ ![Codeship Status for mattscilipoti/passport_scheduler](https://codeship.com/projects/089a0130-1083-0134-9c2b-728415b5360a/status?branch=master)](https://codeship.com/projects/157008)
 
+We're Dockerized!
+-----------------
+
+All dependencies for this project are provided in (and isolated within) docker containers.  This means you only need to [install Docker](https://docs.docker.com/engine/installation/).  You don't need rvm, postgresql, etc.  Just docker.
+> Note: as of June 2016, Docker provides native installation for Linux, OSX, and Windows.  You do NOT need VirtualBox (or equivalent).
+
+### Dev/Browser
+
+1. build and run the container
+  ```
+  $ docker-compose build
+  $ docker-compose run app rake db:setup
+  $ docker-compose up
+  ```
+
+2. Browse to http://localhost.
+
+### Testing
+
+```
+$ docker-compose run app rake
+```
+
+Questions?
+- [Running a Rails Development Environment in Docker](https://blog.codeship.com/running-rails-development-environment-docker/).
+- [Dockerfile best practices](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
+
 For Developers
 -----------------
 

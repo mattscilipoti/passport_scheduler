@@ -12,21 +12,22 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-development:
+on_docker: &on_docker
   adapter:  postgresql
-  host:     localhost
   encoding: unicode
-  database: passport_scheduler_development
   pool:     5
-  username: passport_scheduler
-  password:
+  # only user in default postgres build is 'postgres', with no password
+  username: postgres
+  # password:
   template: template0
+  # for 'host' use name from linked service in docker-compose
+  host: postgres
+  # default port
+  port: 5432
 
-  # Connect on a TCP socket. Omitted by default since the client uses a
-  # domain socket that doesn't need configuration. Windows does not have
-  # domain sockets, so uncomment these lines.
-  #host: localhost
-  #port: 5432
+development:
+  <<: *on_docker
+  database: passport_scheduler_development
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -41,21 +42,5 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter:  postgresql
-  host:     localhost
-  encoding: unicode
+  <<: *on_docker
   database: passport_scheduler_test
-  pool:     5
-  username: passport_scheduler
-  password:
-  template: template0
-
-production:
-  adapter:  postgresql
-  host:     localhost
-  encoding: unicode
-  database: passport_scheduler_production
-  pool:     5
-  username: passport_scheduler
-  password:
-  template: template0
