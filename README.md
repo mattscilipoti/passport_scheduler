@@ -17,7 +17,8 @@ You don't need rvm, postgresql, etc.  Just docker.
 
 > Note: as of June 2016, Docker provides native installation for Linux, OSX, and Windows.  You do NOT need VirtualBox (or equivalent).  
 
-Do NOT install docker via homebrew!
+Do NOT install docker via homebrew!  
+You need the [native install](https://docs.docker.com/engine/installation/) for these instructions to work as indicated.
 > The new Docker install can co-exist with previous homebrew installations.  Check the Docker website for instructions.
 
 ### Dev/Browser
