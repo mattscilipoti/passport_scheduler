@@ -11,8 +11,14 @@ Tool to assist with scheduling classes.
 We're Dockerized!
 -----------------
 
-All dependencies for this project are provided in (and isolated within) docker containers.  This means you only need to [install Docker](https://docs.docker.com/engine/installation/).  You don't need rvm, postgresql, etc.  Just docker.
-> Note: as of June 2016, Docker provides native installation for Linux, OSX, and Windows.  You do NOT need VirtualBox (or equivalent).
+All dependencies for this project are provided in (and isolated within) docker containers.  This means you only need to [install Docker](https://docs.docker.com/engine/installation/).
+
+You don't need rvm, postgresql, etc.  Just docker.
+
+> Note: as of June 2016, Docker provides native installation for Linux, OSX, and Windows.  You do NOT need VirtualBox (or equivalent).  
+
+Do NOT install docker via homebrew!
+> The new Docker install can co-exist with previous homebrew installations.  Check the Docker website for instructions.
 
 ### Dev/Browser
 
